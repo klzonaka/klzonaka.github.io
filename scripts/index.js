@@ -1,5 +1,3 @@
-const news = require("./src/news.json").news;
-
 window.onload = () => {
     history.scrollRestoration = "manual";
 };
@@ -18,6 +16,21 @@ document.addEventListener("selectstart", ev => {
 
 // 要素を取得
 const element = document.getElementById("news");
+let news;
+
+// XMLHttpRequestインスタンスを作成
+const request = new XMLHttpRequest();
+// JSONファイルが置いてあるパスを記述
+request.open('GET', './src/news.json');
+request.send();
+// JSON読み込み時の処理
+request.onreadystatechange = () => {
+    // 全てのデータを受信・正常に処理された場合
+    if (request.readyState == 4 && request.status == 200) {
+        // JSONデータを変換
+        news = JSON.parse(request.responseText);
+    }
+}
 
 // エラーログを消去
 if (news.length) {

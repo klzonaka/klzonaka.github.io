@@ -20,6 +20,7 @@ let news;
 
 fetch("./scripts/src/news.json").then(response => response.json()).then(data => {
     news = data;
+    run();
 });
 
 const availablePages = {
@@ -87,24 +88,26 @@ function loadNews(offset = 0) {
     }
 }
 
-// エラーログを消去
-if (news?.length) {
-    document.getElementById("error").remove();
-    loadNews(0);
-}
-
-// 次のページを読み込む
-function readNextPage() {
-    if (availablePages.next) {
-        availablePages.offset += 10;
-        loadNews(availablePages.offset);
+function run() {
+    // エラーログを消去
+    if (news?.length) {
+        document.getElementById("error").remove();
+        loadNews(0);
     }
-}
 
-// 前のページを読み込む
-function readPreviousPage() {
-    if (availablePages.previous) {
-        availablePages.offset -= 10;
-        loadNews(availablePages.offset);
+    // 次のページを読み込む
+    function readNextPage() {
+        if (availablePages.next) {
+            availablePages.offset += 10;
+            loadNews(availablePages.offset);
+        }
+    }
+
+    // 前のページを読み込む
+    function readPreviousPage() {
+        if (availablePages.previous) {
+            availablePages.offset -= 10;
+            loadNews(availablePages.offset);
+        }
     }
 }

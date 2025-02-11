@@ -18,22 +18,12 @@ document.addEventListener("selectstart", ev => {
 const element = document.getElementById("news");
 let news;
 
-// XMLHttpRequestインスタンスを作成
-const request = new XMLHttpRequest();
-// JSONファイルが置いてあるパスを記述
-request.open('GET', './scripts/src/news.json');
-request.send();
-// JSON読み込み時の処理
-request.onreadystatechange = () => {
-    // 全てのデータを受信・正常に処理された場合
-    if (request.readyState == 4 && request.status == 200) {
-        // JSONデータを変換
-        news = JSON.parse(request.responseText);
-    }
-}
+fetch("./src/news.json").then(response => response.json()).then(data => {
+    news = data;
+});
 
 // エラーログを消去
-if (news.length) {
+if (news?.length) {
     document.getElementById("error").remove();
 
     // 最新情報を取得し、 上位3つの新着情報を掲載する

@@ -19,7 +19,7 @@ const element = document.getElementById("news");
 let news;
 
 fetch("https://klzonaka.github.io/scripts/src/news.json").then(response => response.json()).then(data => {
-    news = data;
+    news = data.news;
     run();
 });
 

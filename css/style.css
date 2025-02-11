@@ -59,7 +59,7 @@ hr {
 
 .navbar {
     z-index: 1;
-    width: 100%;
+    width: 100vw;
     height: 84px;
     padding: 8px;
     backdrop-filter: blur(16px);

@@ -1,6 +1,15 @@
 {
     "news": [
         {
+            "title": "Insider: Recall 制作開始！",
+            "description": [
+                "Insider: Recallの制作を本格的に開始致しました。",
+                "Early Accessは今年の夏を目処に実施いたします。",
+                "(Early AccessはDiscordユーザー限定でプレイできます。)"
+            ],
+            "date": "2025/02/11"
+        },
+        {
             "title": "Webサイト新設！",
             "description": [
                 "Insider: RecallのWebサイトを新しくしました！",

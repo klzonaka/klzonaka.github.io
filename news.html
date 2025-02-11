@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insider: Recall | お知らせ</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="shortcut icon" href="images/favicon.png">
+    </head>
+    <body>
+        <!-- Pagetop -->
+        <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+        <!-- Navigation -->
+        <div class="navbar">
+            <h1>
+                <a href="index.html" class="buttonText">
+                    <div class="button" style="width: 15vw; min-width: 128px;">
+                        &lt; 戻る
+                    </div>
+                </a>
+            </h1>
+        </div>
+        <!-- Header -->
+        <header>
+            <div class="padding"></div>
+            <p>Insider: Recallからの最新情報をチェックできます。</p>
+        </header>
+        <!-- News -->
+        <div class="news" id="news">
+            <h1>
+                お知らせ
+                <span>Notification</span>
+            </h1>
+            <div id="error">
+                <p>お知らせが読み込めませんでした</p>
+            </div>
+        </div>
+        <div class="pageChanger">
+            <a class="buttonText" onclick="readPreviousPage()">
+                <div class="button" style="width: 30vw; opacity: 0.25;" id="previousPage">
+                    &lt; 前のページ
+                </div>
+            </a>
+            <a class="buttonText" onclick="readNextPage()">
+                <div class="button" style="width: 30vw; opacity: 0.25;" id="nextPage">
+                    次のページ &gt;
+                </div>
+            </a>
+        </div>
+        <!-- Main -->
+        <div class="main">
+            <div class="element" id="discord">
+                <h1>
+                    最新情報
+                    <span>Discord</span>
+                </h1>
+                <p>Discordサーバー「まろんさーばー！」に参加すると、 Insider: Recallの新着情報をいち早く取得できます。</p>
+                <p>サーバーをブーストすると、 ゲーム内で様々な特典を得ることもできます！</p>
+                <a href="https://discord.gg/WPVUmCjkaS" class="buttonText">
+                    <div class="button">
+                        Discordに参加！
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            Copyright &copy; 2025 Marron Sever
+        </footer>
+        <script src="scripts/news.js"></script>
+    </body>
+</html>

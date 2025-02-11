@@ -21,7 +21,7 @@ let news;
 // XMLHttpRequestインスタンスを作成
 const request = new XMLHttpRequest();
 // JSONファイルが置いてあるパスを記述
-request.open('GET', './src/news.json');
+request.open('GET', './scripts/src/news.json');
 request.send();
 // JSON読み込み時の処理
 request.onreadystatechange = () => {

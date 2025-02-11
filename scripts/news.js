@@ -39,7 +39,7 @@ function loadNews(offset = 0) {
     nextPage.style.opacity = 0.2;
     previousPage.style.opacity = 0.2;
 
-    element.innerHTML = "";
+    element.innerHTML = "<h1>お知らせ<span>Notification</span></h1>";
 
     // 最新情報を取得し、 10この新着情報を掲載する
     for (let i = offset; i < offset + 10; i++) {

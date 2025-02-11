@@ -1,4 +1,4 @@
-import { news } from "./src/news.json";
+const news = require("./src/news.json").news;
 
 window.onload = () => {
     history.scrollRestoration = "manual";

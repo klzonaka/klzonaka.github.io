@@ -18,7 +18,7 @@ document.addEventListener("selectstart", ev => {
 const element = document.getElementById("news");
 let news;
 
-fetch("./src/news.json").then(response => response.json()).then(data => {
+fetch("./scripts/src/news.json").then(response => response.json()).then(data => {
     news = data;
 });
 
